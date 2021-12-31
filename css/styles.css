@@ -371,7 +371,7 @@ header {
     letter-spacing: 0.03em;
     color: #757575;
 }
-.icon-tick {
+.ticks-icon {
     display: flex;
     margin-right: 8px;
     width: 16px;
@@ -379,10 +379,10 @@ header {
     border: 2px solid var(--primary-text-color);
     border-radius: 2px;
 }
-.checkbox:checked + .icon-tick {
+.checkbox:checked + .ticks-icon {
     background-origin: border-box;
     background-color: var(--accent-color);
-    background-image: url(../images/tick.svg);
+    background-image: url(./images/icons.svg#icon-tick);
     background-size: contain;
     border-color: var(--accent-color);
 }
@@ -426,6 +426,7 @@ header {
 .button-close:hover {
     fill: var(--accent-color);
 }
+
 /*features*/
 .features {
     padding-bottom: 0;
