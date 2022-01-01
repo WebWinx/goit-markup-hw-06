@@ -831,7 +831,7 @@ address {
     margin-right: 12px;
 }
 .email-form-field {
-    margin-left: 93px;
+    margin-left: auto;
 }
 .form-field {
     padding: 15px 16px;
