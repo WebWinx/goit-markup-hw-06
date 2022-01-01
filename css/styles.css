@@ -230,6 +230,7 @@ header {
 }
 .primary-button {
     min-width: 200px;
+    height: 50px;
     display: block;
     margin: 0 auto;
     color: var(--text-color-on-dark);
@@ -414,10 +415,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.modal-button-submit {
-    height: 50px;
-    transition: color var(--animation-duration) var(--animation-timing-function);
 }
 .button-close {
     display: flex;
@@ -834,7 +831,7 @@ address {
     margin-right: 12px;
 }
 .email-form-field {
-    margin-left: auto;
+    margin-left: 93px;
 }
 .form-field {
     padding: 15px 16px;
@@ -851,25 +848,16 @@ address {
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
 }
-.form-button {
+.down {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px 29px;
-    width: 200px;
-    height: 50px;
     margin-left: 12px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.06em;
-    color: var(--text-color-on-dark);
-    background-color: var(--accent-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    border: none;
 }
-.form-button-icon {
+.send-icon {
     margin-left: 10px;
     fill: var(--text-color-on-dark);
+    width: 24px;
+    height: 24px;
 }
