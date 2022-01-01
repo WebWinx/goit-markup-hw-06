@@ -229,6 +229,9 @@ header {
     text-align: center;
 }
 .primary-button {
+    min-width: 200px;
+    display: block;
+    margin: 0 auto;
     color: var(--text-color-on-dark);
     background-color: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -237,9 +240,8 @@ header {
     line-height: 1.8;
     padding: 10px 36px;
     border: none;
-    display: block;
-    margin: 0 auto;
     border-radius: 4px;
+    transition: fill var(--animation-duration) var(--animation-timing-function);
 }
 .overlay {
     max-width: 1600px;
@@ -296,19 +298,29 @@ header {
     letter-spacing: 0.03em;
     color: #212121;
 }
+.label {
+    margin-bottom: 10px;
+    display: block;
+}
 .modal-form-lable {
+    margin-top: 4px;
+    margin-bottom: 4px;
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
     text-align: left;
     font-size: 12px;
     line-height: 1.167;
     letter-spacing: 0.01em;
-    color: #757575;
+    color: var(--color-text-description);
+}
+.input-group-absolute {
+    position: relative;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
 }
 .modal-form-input {
-    margin-top: 4px;
     padding: 11px 0px 11px 42px;
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -322,19 +334,26 @@ header {
     display: inline-block;
     left: 12px;
     top: 50%;
+    transform: translateY(-50%);
     fill: var(--primary-text-color);
     transition: fill var(--animation-duration) var(--animation-timing-function);
 }
-.modal-form-lable:focus-within > .modal-form-input {
+.input-group-absolute:focus-within > .modal-form-input {
     outline: none;
-    border-color: var(--title-first-color);
+    border-color: var(--accent-color);
 }
-.modal-form-lable:focus-within > .modal-icon {
+.input-group-absolute:focus-within > .modal-icon {
     outline: none;
     fill: var(--accent-color);
 }
-.comment-area {
+.form-text-area {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 20px;
+}
+.comment-area {
+    margin-top: 10px;
+    margin-bottom: 4px;
 }
 .form-comment {
     padding: 12px 16px;
@@ -353,7 +372,7 @@ header {
 }
 .form-comment:focus {
     outline: none;
-    border: 1px solid var(--title-first-color);
+    border: 1px solid var(--accent-color);
 }
 .form-comment::placeholder {
     font-size: 12px;
@@ -369,7 +388,7 @@ header {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    color: #757575;
+    color: var(--color-text-description);
 }
 .ticks-icon {
     display: flex;
@@ -378,6 +397,7 @@ header {
     height: 15px;
     border: 2px solid var(--primary-text-color);
     border-radius: 2px;
+    cursor: pointer;
 }
 .checkbox:checked + .ticks-icon {
     background-origin: border-box;
@@ -396,17 +416,7 @@ header {
     align-items: center;
 }
 .modal-button-submit {
-    width: 200px;
     height: 50px;
-    border: none;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.06em;
-    color: var(--text-color-on-dark);
-    background-color: var(--accent-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
     transition: color var(--animation-duration) var(--animation-timing-function);
 }
 .button-close {
@@ -784,6 +794,7 @@ address {
 }
 .footer-objects {
     display: flex;
+    align-items: baseline;
 }
 .footer-icons-position {
     display: flex;
@@ -814,23 +825,16 @@ address {
     background-color: var(--accent-color);
 }
 /*form*/
-.form-text {
-    margin-bottom: 20px;
-    margin-left: 93px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    color: var(--text-color-on-dark);
-}
+
 .form-area {
     display: flex;
 }
-input#email.form-field {
-    margin-left: 93px;
-}
+
 .email-form {
     margin-right: 12px;
+}
+.email-form-field {
+    margin-left: auto;
 }
 .form-field {
     padding: 15px 16px;
